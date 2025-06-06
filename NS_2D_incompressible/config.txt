@@ -1,0 +1,44 @@
+# Domain & mesh
+Lx = 2
+Ly = 1
+Nx = 32
+#Nx = 64
+Nx = 96
+#Nx = 128
+#Nx = 256
+Ny = 64
+#Ny = 96
+#Ny = 256
+#Ny = 512
+
+# Physical & time
+viscosity    = 1.5e-3
+cfl_number   = 0.5
+final_time   = 20.0
+save_interval = 1
+
+# Numerical schemes 
+poisson_solver    = ginkgo
+advection_scheme  = Upwind2ndOrder
+#initial_condition = kelvin_helmholtz
+initial_condition = one_x
+#boundary_conditions = periodic
+boundary_conditions = inflow_outflow_x
+
+
+# Obstacle
+#obstacle_type      = square
+obstacle_type      = circular
+#obstacle_type      = channel
+obstacle_center_x  = 0.4
+obstacle_center_y  = 0.5
+obstacle_size      = 0.1
+
+
+
+
+
+
+
+
+

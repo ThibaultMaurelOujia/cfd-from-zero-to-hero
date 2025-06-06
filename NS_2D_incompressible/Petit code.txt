@@ -1,0 +1,19 @@
+if (params.verbosity >= 1) {
+  std::cout << "[Info] it="<< it
+            << " t="<< t 
+            << " max|u|="<< max_u << "\n";
+}
+// et pour du debug détaillé :
+if (params.verbosity >= 2) {
+  std::cout << "[Debug] shape A = "<< Nx<<"×"<<Ny<<"\n";
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,95 @@
+navier_stokes_cpp/
+├── CMakeLists.txt   	# Projet racine, règles de build CMake
+├── config.txt    	# Fichier de configuration (clé=valeur)
+├── build/     		# Dossier généré par CMake (binaires, cache, etc.)
+├── include/         	# Headers publics
+│   ├── advection.hpp  	# Interfaces des schémas d’advection
+│   ├── diffusion.hpp  	# Interface terme de diffusion
+│   ├── boundary.hpp	# Déclarations des conditions aux limites
+│   ├── init.hpp       	# Déclarations des conditions initiales
+│   ├── params.hpp    	# Définition de SimulationParams
+│   ├── utils.hpp      	# Fonctions utilitaires (I/O, logs…)
+│   └── urenderer_colormap.hpp
+├── src/      		# Implémentations C++
+│   ├── main.cpp     	# Point d’entrée : lit config, finalize(), lance la simulation
+│   ├── params.cpp    	# Lecture de config.txt, SimulationParams::finalize()
+│   ├── simulation.cpp	# Boucle temporelle et orchestration générale
+│   ├── advection.cpp   # Implémentation des schémas d’advection
+│   ├── diffusion.cpp 	# Implémentation du terme de diffusion
+│   ├── boundary.cpp	# Implémentation des BC (périodique, inflow/outflow)
+│   ├── init.cpp 	# Implémentation des conditions initiales
+│   ├── utils.cpp 	# Implémentations utilitaires (logging, etc.)
+│   └── urenderer_colormap.cpp
+├── Petit code.txt  	# Notes temporaires / exemples rapides
+└── structure.txt   	# Description de cette arborescence
+
+
+## TODO  
+
+
+
+
+[] Coefficient de pression Cp
+[] Coefficients de portance CL  et traînée CD
+[] Distribution de Mach local
+[] Indicateurs de choc
+ 
+[] Rajouter grille temporel variable 
+
+
+
+
+
+cd /Users/moli/Documents/Livre_Cours/CFD_code
+git init
+
+git remote add origin git@github.com:ThibaultMaurelOujia/cfd-from-zero-to-hero.git
+
+git add .
+git commit -m "Import de CFD_code : scripts Python, exemples 1D/2D, navier_stokes_cpp C++"
+
+git branch -M main
+git push -u origin main
+
+
+
+
+git remote set-url origin git@github.com:ThibaultMaurelOujia/cfd-from-zero-to-hero.git
+
+
+
+
+git add <fichiers modifiés>
+
+
+git add -A
+git commit -m "Message descriptif"
+git push
+
+
+
+git commit --allow-empty-message -m ""
+
+
+
+cd /Users/moli/Documents/Livre_Cours/CFD_code/.git
+rm index.lock
+cd ..
+git commit -m "      "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+# Domain & mesh
+Lx = 1
+Ly = 1
+Nx = 32
+Ny = 64
+Nx = 64
+Ny = 96
+#Nx = 128
+#Ny = 256
+#Nx = 256
+#Ny = 512
+#Nx = 512
+#Ny = 1024
+
+# Physical & time
+viscosity    = 1.5e-5
+cfl_number   = 0.5
+final_time   = 20.0
+save_interval = 1
+
+# Numerical schemes
+#poisson_solver    = direct
+poisson_solver    = ginkgo
+#poisson_solver    = amg
+advection_scheme  = Upwind2ndOrder
+#advection_scheme  = Weno3_ConservativeRusanov
+initial_condition = kelvin_helmholtz
+boundary_conditions = periodic
+
+# Obstacle (square)
+obstacle_type      = square
+obstacle_center_x  = 0.4
+obstacle_center_y  = 0.5
+obstacle_size      = 0.2
+
+
+
+
+
+
+
+
+
+
