@@ -3,8 +3,7 @@
 
 Pedagogical CFD implementation: from 1D schemes to 2D compressible flow
 
-
-A totally disorganized collection of solvers, test cases, bad decisions and maybe one or two working simulations of fluid dynamics.
+This repository brings together multiple solvers, test cases, and examples to progressively explore the modeling and numerical simulation of fluid flows.
 
 
 ## License
