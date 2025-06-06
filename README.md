@@ -1,3 +1,6 @@
+![Schlieren example](NS_2D_compressible/Figures/M0.85_25_schlieren.png)
+
+
 # cfd-from-zero
 
 
