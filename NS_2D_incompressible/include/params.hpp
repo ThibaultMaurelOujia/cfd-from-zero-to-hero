@@ -11,9 +11,7 @@
 namespace navier_stokes {
 
 
-/**
- * @brief Tous les parametres configurables de la simulation Navier-Stokes 2D.
- */
+
 struct SimulationParams {
     // - Domain & maillage -
     double Lx = 1.0;     ///< longueur du domaine en x

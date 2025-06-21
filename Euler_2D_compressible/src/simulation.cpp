@@ -218,7 +218,7 @@ void Simulator::output_step(int it, double t, double dt)
                   << "  dt=" << dt << '\n' << std::flush; // std::endl
 
 
-    // accès aux dimensions et ghost‐layers
+    // accès aux dimensions et ghost-layers
     const int Nx = params_.Nx;
     const int Ny = params_.Ny;
     const int N_ghost  = params_.bc_ghost_layers;

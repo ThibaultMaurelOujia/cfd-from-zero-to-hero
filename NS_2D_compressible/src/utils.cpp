@@ -392,7 +392,7 @@ void compute_lift_coefficient(
         int n_y = -1;
         // C_L_on_wall[i_fluid][j_fluid] = (-p_field[i_fluid][j_fluid]*n_y + tau_yx[i_fluid][j_fluid]*n_x + tau_yy[i_fluid][j_fluid]*n_y) * dx / q_inf;
         C_L_on_wall[i_fluid][j_fluid] = (-p_field[i_fluid][j_fluid]*n_y + tau_yy[i_fluid][j_fluid]*n_y) * dx / q_inf;
-    }
+    } // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! A CORRIGE ET FINIR
 
     for(auto [I, J] : mask.top) {
         int i_fluid = I;
@@ -401,7 +401,7 @@ void compute_lift_coefficient(
         int n_y = 1;
         // C_L_on_wall[i_fluid][j_fluid] = (-p_field[i_fluid][j_fluid]*n_y + tau_yx[i_fluid][j_fluid]*n_x + tau_yy[i_fluid][j_fluid]*n_y) * dx / q_inf;
         C_L_on_wall[i_fluid][j_fluid] = (-p_field[i_fluid][j_fluid]*n_y + tau_yy[i_fluid][j_fluid]*n_y) * dx / q_inf;
-    }
+    }// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! A CORRIGE ET FINIR
 }
 
 void compute_drag_coefficient(
@@ -419,7 +419,7 @@ void compute_drag_coefficient(
         // int n_y = 0;
         // C_L_on_wall[i_fluid][j_fluid] = (-p_field[i_fluid][j_fluid]*n_x + tau_xx[i_fluid][j_fluid]*n_x + tau_xy[i_fluid][j_fluid]*n_y) * dy / q_inf;
         C_L_on_wall[i_fluid][j_fluid] = (-p_field[i_fluid][j_fluid]*n_x + tau_xx[i_fluid][j_fluid]*n_x) * dy / q_inf;
-    }
+    }// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! A CORRIGE ET FINIR
 
     for(auto [I, J] : mask.right) {
         int i_fluid = I + 1;
@@ -428,7 +428,7 @@ void compute_drag_coefficient(
         // int n_y = 0;
         // C_L_on_wall[i_fluid][j_fluid] = (-p_field[i_fluid][j_fluid]*n_x + tau_xx[i_fluid][j_fluid]*n_x + tau_xy[i_fluid][j_fluid]*n_y) * dy / q_inf;
         C_L_on_wall[i_fluid][j_fluid] = (-p_field[i_fluid][j_fluid]*n_x + tau_xx[i_fluid][j_fluid]*n_x) * dy / q_inf;
-    }
+    }// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! A CORRIGE ET FINIR
 }
 
 

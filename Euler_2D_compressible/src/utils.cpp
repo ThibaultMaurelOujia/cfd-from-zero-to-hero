@@ -54,7 +54,7 @@ void write_field_binary(const std::string& filename,
     if (!ofs)
         throw std::runtime_error("Impossible d'ouvrir " + filename);
 
-    // On parcourt uniquement les cellules interieures [N_ghost..Nx+N_ghost-1]x[N_ghost..Ny+N_ghost-1]
+    // On parcourt uniquement les cellules interieures  
     for (int i = N_ghost; i < Nx + N_ghost; ++i) {
         for (int j = N_ghost; j < Ny + N_ghost; ++j) {
             double v = field[i][j];
@@ -266,7 +266,7 @@ void compute_mach(
       }
     }
 
-    // ghost‐layers à zéro
+    // ghost-layers à zéro
     for(int i = 0; i < N_ghost; ++i)
       for(int j = 0; j < (int)mach[i].size(); ++j)
         mach[i][j] = mach[Nx+N_ghost][j] = 0.0;

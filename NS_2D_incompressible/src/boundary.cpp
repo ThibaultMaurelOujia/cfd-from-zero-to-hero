@@ -73,7 +73,7 @@ static void apply_inflow_outflow_bc(const SimulationParams& params, Field& u, Fi
 
     for (int i = N_ghost; i <2*N_ghost; ++i) {
         for (int j = 0; j < Ny + 2 * N_ghost; ++j) {
-            u[i][j] = u_in;            // on impose u
+            u[i][j] = u_in;           
             v[i][j] = 0.0;             // v=0
             p[i][j] = p[N_ghost][j];       // zero-gradient p
         }
@@ -219,10 +219,7 @@ ObstacleMask createMask(const SimulationParams& params){
             // std::cout << "solid[i][j]= " << solid[i][j] << '\n' << std::flush;
         }
     }
-
-    // ------------------------------------------------------------------    
-    // 2) On garantit l'epaisseur mini = 2*N_ghost
-    // ------------------------------------------------------------------
+ 
     if (type != "none")
         ensure_min_thickness(solid, N_ghost);
 
@@ -263,18 +260,18 @@ void apply_immersed_boundary(const SimulationParams& params,
 {
     const int  N_ghost     = params.bc_ghost_layers;
 
-    // 1) no-slip : zero dans tout le solide
+    //  no-slip 
     for (auto [I, J] : mask.obstacle) {
         u[I][J] = 0.0;
         v[I][J] = 0.0;
     }
 
-    // 2) pour chaque couche r = 1...N_ghost, on remplit les ghost-layers
+    //   on remplit les ghost-layers
     for (int r = 1; r <= N_ghost; ++r) {
         // ------ HORIZONTAL ------
-        // gauche : on place les ghost-cells (I,J) in mask.left
+        // gauche 
         for (auto [I, J] : mask.left) {
-            // miroir antisymetrique : u_bc[I][J] = - u_orig[I-r][J]
+            // miroir antisymetrique   u_bc[I][J] = - u_orig[I-r][J]
             u[I][J] = u[I - r][J];
         }
         // droite

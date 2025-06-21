@@ -8,12 +8,7 @@
 
 namespace navier_stokes {
 
-/**
- * @brief Compute the convective terms A_u, A_v depending on params.advection_scheme. 
- * Supported schemes:
- *   - "Upwind2ndOrder"
- *   - "Weno3_ConservativeRusanov"
- */
+    
  void compute_advection(
     const SimulationParams& params,
     const Field& u, const Field& v,

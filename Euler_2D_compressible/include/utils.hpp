@@ -24,7 +24,7 @@ using Field = std::vector<std::vector<double>>;
 // DEmarre le chronometre
 void time_tic();
 
-// ArrEte le chrono, affiche (si msg non vide) et renvoie le temps ecoule en secondes
+// ArrEte le chrono, affiche  et renvoie le temps ecoule en secondes
 double time_toc(const std::string& msg = "", int verbosity=1);
 
 

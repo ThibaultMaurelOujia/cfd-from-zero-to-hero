@@ -24,14 +24,11 @@ using Field = std::vector<std::vector<double>>;
 // DEmarre le chronometre
 void time_tic();
 
-// ArrEte le chrono, affiche (si msg non vide) et renvoie le temps ecoule en secondes
+// Arrete le chrono, affiche et renvoie le temps ecoule en secondes
 double time_toc(const std::string& msg = "");
 
 
 
-/**
- * @brief Compute the maximum absolute value over the interior of the 2D field (skipping ghost layers). 
- */
  double max_abs_interior(
     const Field& field,
     int Nx, int Ny, int N_ghost
