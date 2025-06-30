@@ -188,7 +188,7 @@ void Simulator::rk3_substep(double c0, double c1, double dt) {
         D_rho_, D_rho_u_, D_rho_v_, D_E_,  
         dx, dy
     );
-    time_toc("Diffusion"); 
+    time_toc("Diffusion", params_.verbosity); 
 
     // 4) build provisional velocities 
     time_tic();

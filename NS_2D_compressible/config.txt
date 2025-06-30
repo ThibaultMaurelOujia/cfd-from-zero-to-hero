@@ -31,8 +31,8 @@ cfl_number   = 0.2
 final_time   = 20.0
 save_interval = 2
 # density       pressure       pressure_coefficient       lift_coefficient       drag_coefficient       schlieren       vorticity       mach
-output_quantity  = lift_coefficient
-verbosity = 1
+output_quantity  = pressure
+verbosity = 2
 
 # Numerical schemes 
 advection_scheme  = compute_advection_weno3_HLLC
