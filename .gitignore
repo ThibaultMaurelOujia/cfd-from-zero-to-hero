@@ -1,0 +1,73 @@
+# -----------------------
+# Dossier: build, results, third_party, old_code
+# -----------------------
+build/
+OLD/
+OLD_CODE_SAVE/
+results/
+third_party/
+commande.txt
+
+# -----------------------
+# Exécutables
+# -----------------------
+/navier_stokes
+*.out
+*.exe
+
+# -----------------------
+# Fichiers CMake générés
+# -----------------------
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+cmake_install.log
+
+# -----------------------
+# Fichiers objets et bibliothèques
+# -----------------------
+*.o
+*.obj
+*.lo
+*.la
+*.a
+*.so
+*.dylib
+*.dll
+
+# -----------------------
+# Fichiers de configuration générés
+# -----------------------
+Makefile       # si jamais votre Makefile est généré (sinon retirez cette ligne)
+*.mk
+
+# -----------------------
+# Fichiers temporaires & sauvegardes
+# -----------------------
+*~
+*.swp
+*.tmp
+*.bak
+*.log
+
+# -----------------------
+# Systèmes d’exploitation
+# -----------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------
+# Environnements/IDEs
+# -----------------------
+.vscode/
+.idea/
+*.code-workspace
+
+# -----------------------
+# Autres dossiers de cache
+# -----------------------
+/__pycache__/
+/*.ipynb_checkpoints/
+
+
+

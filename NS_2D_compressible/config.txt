@@ -1,0 +1,64 @@
+# Domain & mesh
+Lx = 3
+Ly = 1
+
+#Nx = 32
+#Nx = 64
+#Nx = 96
+#Nx = 128
+#Nx = 256
+Nx = 512
+Nx = 768
+#Nx = 1024
+#Nx = 2048
+#Nx = 4096
+
+#Ny = 64
+#Ny = 96
+#Nx = 128
+Ny = 256
+Ny = 384
+Ny = 512
+Nx = 1024
+#Ny = 2048
+#Ny = 4096
+
+# Physical & time
+viscosity    = 1.8e-5
+Pr           = 0.71
+cfl_number   = 0.2
+#cfl_number   = 0.05
+final_time   = 20.0
+save_interval = 2
+# density       pressure       pressure_coefficient       lift_coefficient       drag_coefficient       schlieren       vorticity       mach
+output_quantity  = pressure
+verbosity = 2
+
+# Numerical schemes 
+advection_scheme  = compute_advection_weno3_HLLC
+# kelvin_helmholtz       one_x       sod_x       isentropic_vortex       blast_2d
+initial_condition = one_x
+# periodic      inflow_outflow_x
+boundary_conditions = inflow_outflow_x
+noise_level = 1e-2
+
+inflow_velocity = 0.85
+#inflow_velocity = 1.05
+
+# Obstacle
+# none       square       circular       channel       naca       supersonic       OAT15a
+obstacle_type      = naca
+obstacle_center_x  = 0.4
+obstacle_center_y  = 0.5
+obstacle_size      = 0.3
+#obstacle_size      = 0.1
+#obstacle_size      = 0.03
+
+
+
+
+
+
+
+
+
